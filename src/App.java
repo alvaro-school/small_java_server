@@ -8,10 +8,10 @@ public class App {
         ss = new ServerSocket(8080);
         System.out.println("listening on: " + 8080);
         Socket cs;
-        while ((cs = ss.accept()) != null) {
+        while (true) {
+            cs = ss.accept();
             new Handler(cs).start();
         }
-        ss.close();
     }
 }
 
