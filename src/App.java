@@ -32,7 +32,6 @@ class Handler extends Thread {
         try (
             BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
             PrintWriter out = new PrintWriter(s.getOutputStream(), true);
-            Socket autoCloseSocket = s 
         ) {
             String input = in.readLine();
             if (input == null) return;
