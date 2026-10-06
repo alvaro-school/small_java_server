@@ -6,9 +6,11 @@ import java.io.*;
 public class App {
     static ServerSocket ss;
     public static void main(String[] args) throws Exception {
+        final int PORT = 8080;
+
         System.out.println("Server starting...");
-        ss = new ServerSocket(8080);
-        System.out.println("listening on: " + 8080);
+        ss = new ServerSocket(PORT);
+        System.out.println("listening on: " + PORT);
         Socket cs;
         while (true) {
             cs = ss.accept();
